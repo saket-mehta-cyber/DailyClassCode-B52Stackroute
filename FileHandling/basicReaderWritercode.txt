@@ -1,6 +1,6 @@
 public class FileIO {
 	public static void main(String args[]) {
-		/*FileReader
+		/*FileReaders
 		try {
 			FileReader fileReader = new FileReader(
 					"C:/Users/saket/Documents/stackroute wipro/fileHandling Java/readMe.txt");
