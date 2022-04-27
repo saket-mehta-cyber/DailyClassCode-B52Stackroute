@@ -1,0 +1,47 @@
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
+public class CsvTester {
+
+	public static void main(String[] argStrings) {
+		try {
+			BufferedReader bufferedReader = new BufferedReader(
+					new FileReader("C:/Users/saket/Documents/stackroute wipro/fileHandling Java/trial.csv"));
+			String line;
+			int iteration = 0;
+			List<String[]> lines = new ArrayList<String[]>();
+			while ((line = bufferedReader.readLine()) != null) {
+				if (iteration == 0) {
+					iteration++;
+					continue;
+				}
+				lines.add(line.split(","));
+//				String[] values = line.split(",");
+//				System.out.println("Employee[ Id: " + values[0] + " Name " + values[1] + " Post " + values[2] + " ]");
+				
+
+			}
+			// convert our list to a String array.
+			String[][] array = new String[lines.size()][0];
+			lines.toArray(array);
+			
+			for (int i = 0; i < array.length; i++) {
+				for (int j = 0; j < array.length; j++) {
+					System.out.print(array[i][j]+" ");
+					
+				}
+				System.out.println();
+			}
+			
+			bufferedReader.close();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+}
