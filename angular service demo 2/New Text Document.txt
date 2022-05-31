@@ -1,0 +1,7 @@
+Backend
+1 npm i
+2 node app
+
+Front end
+npm i
+ng s --o
